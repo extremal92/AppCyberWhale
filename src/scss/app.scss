@@ -1,0 +1,50 @@
+@import "variables";
+@import "libs/normalize";
+@import "components/header";
+@import "components/sort";
+@import "components/charts";
+
+
+
+.main{
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    &__top{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &__table{
+        width: 100%;
+        table{
+            tr{
+                th{
+                    padding-left: 0;
+                    button{
+                        color: $black;
+                        width: 100%;
+                        height: 35px;
+                        font-size: 18px;
+                        border: none;
+                        background: none;
+                        transition: ease-in-out .3s;
+                        cursor: pointer;
+                        margin-left: 10px;
+                        text-align: left;
+                        &:hover{
+                            color: $site_color;
+                        }
+                        i{
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

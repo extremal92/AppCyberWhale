@@ -1,0 +1,37 @@
+.header {
+  background-color: #08bad7;
+}
+
+.header__main {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__main h1 {
+  color: #fff;
+}
+
+.header__main .headerLanguage {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__main .headerLanguage button {
+  width: 40px;
+  height: 40px;
+  text-transform: uppercase;
+  color: white;
+  background: black;
+  border: 2px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: ease-in-out .3s;
+}
+
+.header__main .headerLanguage button:hover {
+  border: 2px solid #61a60e;
+  color: #61a60e;
+}

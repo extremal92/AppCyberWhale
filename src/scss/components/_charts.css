@@ -1,0 +1,10 @@
+.main__chart {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.main__chart-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

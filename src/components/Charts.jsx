@@ -24,7 +24,12 @@ function Charts() {
                 <div className='main__chart-items'>
                     {isLoaded && items.map((item, key)=>{
                         return(
-                            <ReactApexChart options={item.options} series={item.series} type={item.options.chart.type} width={item.options.chart.width} key={key}/>
+                            <ReactApexChart 
+                                options={item.options} 
+                                series={item.series} 
+                                type={item.options.chart.type} 
+                                width={item.options.chart.width} 
+                                key={key}/>
                         )})
                     }
                 </div>
@@ -34,4 +39,4 @@ function Charts() {
     )
 }
 
-export default Charts;
+export default React.memo(Charts);

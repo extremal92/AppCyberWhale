@@ -14,12 +14,12 @@ const sortItems = [
 ];
 
 const categoryNames = [ 
-  { name: 'Sort by id', type:'transaction_id', order: 'asc'}, 
-  { name: 'Sort by date', type:'date', order: 'asc'}, 
-  { name: 'Sort by debit', type:'debitAmount', order: 'asc'}, 
-  { name: 'Sort by credit', type:'creditAmount', order: 'asc'}, 
-  { name: 'Sort by sender', type:'sender', order: 'asc'}, 
-  { name: 'Sort by reciver', type:'receiver', order: 'asc'}, 
+  { name: 'Id', type:'transaction_id', order: 'asc'}, 
+  { name: 'Date', type:'date', order: 'asc'}, 
+  { name: 'Debit', type:'debitAmount', order: 'asc'}, 
+  { name: 'Credit', type:'creditAmount', order: 'asc'}, 
+  { name: 'Sender', type:'sender', order: 'asc'}, 
+  { name: 'Reciver', type:'receiver', order: 'asc'}, 
 ];
 
 
@@ -73,15 +73,23 @@ function Home() {
                 </tr>
               </thead>
               <tbody>
-              {isLoaded && items.map((item, index)=>{
+              {items && items.map((item, index)=>{
+                  const {
+                    transaction_id,
+                    date, 
+                    debitAmount,
+                    creditAmount,
+                    sender,
+                    receiver
+                  } = item;
                   return(
-                      <tr key={item.transaction_id} className={index}>
-                          <td>{item.transaction_id}</td>
-                          <td>{item.date}</td>
-                          <td>{item.debitAmount}</td>
-                          <td>{item.creditAmount}</td>
-                          <td>{item.sender.first} {item.sender.last}</td>
-                          <td>{item.receiver.first} {item.receiver.last}</td>
+                      <tr key={transaction_id}>
+                          <td>{transaction_id}</td>
+                          <td>{date}</td>
+                          <td>{debitAmount}</td>
+                          <td>{creditAmount}</td>
+                          <td>{sender.first} {sender.last}</td>
+                          <td>{receiver.first} {receiver.last}</td>
                       </tr>
                   )})
                }

@@ -144,6 +144,7 @@ a {
 
 .main__chart {
   width: 100%;
+  margin: 20px 0;
 }
 
 .main__chart-items {
@@ -169,6 +170,23 @@ a {
 
 .main__table {
   width: 100%;
+}
+
+.main__table-sort button {
+  outline: none;
+  color: #232323;
+}
+
+.main__table-sort i {
+  display: none;
+}
+
+.main__table-sort.active button {
+  color: #61a60e;
+}
+
+.main__table-sort.active i {
+  display: inherit;
 }
 
 .main__table table tr th {

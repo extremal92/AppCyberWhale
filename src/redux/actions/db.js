@@ -11,7 +11,7 @@ export const fetchDb = (category, sortBy) => (dispatch) => {
         type: 'SET_LOADED',
         payload: false
     });
-    axios.get(`http://localhost:3001/database?${category !== null ? `_sort=${category}` : '' }&_start=0&_limit=${sortBy.type}&_order=${sortBy.order}`)
+    axios.get(`http://localhost:3001/database?${category !== null ? `_sort=${category}` : '' }&_start=0&_limit=${sortBy.type}`)
     .then(({ data }) => {
         dispatch(setDb(data));
     });

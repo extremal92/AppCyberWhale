@@ -12,7 +12,7 @@ const chart = (state = initialState, action) => {
     
             }
         default:
-            return state;
+            return {...state};
     }
 }
 

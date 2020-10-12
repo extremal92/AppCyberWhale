@@ -20,6 +20,23 @@
     }
     &__table{
         width: 100%;
+        &-sort{
+            button{
+                outline: none;
+                color: $black;
+            }
+            i{
+                display: none;
+            }
+        }
+        &-sort.active{
+            button{
+                color: $site_color;
+            }
+            i{
+                display: inherit;
+            }
+        }
         table{
             tr{
                 th{

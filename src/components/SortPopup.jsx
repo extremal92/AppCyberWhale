@@ -12,18 +12,20 @@ const SortPopup = React.memo(function SortPopup({items, activeSortType, onClickS
     const toggleShowSort = () => {
         setShowSort(!showSort)
     };
-    const handleOutsideClick = (e) => {
+    const handleOutsideClick = React.useRef((e) => {
         const path = e.path || (e.composedPath && e.composedPath());
         if(!path.includes(sortRef.current)){
             setShowSort(false);
         }
-    }
+    })
     React.useEffect(()=>{
-        document.body.addEventListener('click', handleOutsideClick);
+        document.body.addEventListener('click', handleOutsideClick.current);
+        return () => {
+            document.body.addEventListener('click', handleOutsideClick.current);
+        }
     }, []);
 
     const onSelectItem = (key) => {
-        // setActiveItem(key);
         if(onClickSortType){
             onClickSortType(key);
         }

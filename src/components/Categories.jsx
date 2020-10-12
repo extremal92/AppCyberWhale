@@ -21,4 +21,4 @@ const Categories = React.memo(function Categories({ activeCategory, items, onCli
 })
 
 
-export default React.memo(Categories);
+export default Categories;

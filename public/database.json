@@ -4,7 +4,7 @@
     "options": {
       "chart": {
         "width": 400,
-        "type": "donut"
+        "type": "pie"
       },
       "plotOptions": {
         "pie": {
@@ -47,7 +47,7 @@
       "options": {
         "chart": {
           "width": 400,
-          "type": "donut"
+          "type": "pie"
         },
         "plotOptions": {
           "pie": {
